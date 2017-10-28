@@ -30,6 +30,9 @@ class MenuBar : UIView, UICollectionViewDataSource, UICollectionViewDelegate, UI
         addSubview(collectionView)
         addConstraintsWithFormat(format : "H:|[v0]|", views: collectionView)
         addConstraintsWithFormat(format : "V:|[v0]|", views: collectionView)
+        // pre select one of icones when the app runs for the first time
+        let selectedIndexPath = NSIndexPath(item: 0, section: 0)
+        collectionView.selectItem(at: selectedIndexPath as IndexPath, animated: false, scrollPosition: [])
         
     }
     
