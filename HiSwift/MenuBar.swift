@@ -20,11 +20,11 @@ class MenuBar : UIView, UICollectionViewDataSource, UICollectionViewDelegate, UI
     }()
     
     let cellId = "cellId"
-    let imageNames = ["home", "trending", "subscriptions", "account"]
+    let imageNames = ["Social not selected","Home not selected", "Profile not selected"]
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
+        collectionView.register(MenuCell.self, forCellWithReuseIdentifier: cellId)
         backgroundColor = UIColor.blue
         // add collection view to the view
         addSubview(collectionView)
@@ -41,10 +41,10 @@ class MenuBar : UIView, UICollectionViewDataSource, UICollectionViewDelegate, UI
         return 1
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! MenuCell
         
-//        cell.imageView.image = UIImage(named: imageNames[indexPath.item])?.imageWithRenderingMode(.AlwaysTemplate)
-//        cell.tintColor = UIColor.rgb(red: 91, green: 14, blue: 13)
+        cell.imageView.image = UIImage(named: imageNames[indexPath.item])?.withRenderingMode(.alwaysTemplate)
+        cell.tintColor = UIColor.rgb(red: 91, green: 14, blue: 13)
         cell.backgroundColor = UIColor.blue
         
         return cell
@@ -54,7 +54,7 @@ class MenuBar : UIView, UICollectionViewDataSource, UICollectionViewDelegate, UI
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: frame.width / 3,height: frame.height)
     }
-    
+    // the space between cell equal zero
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
@@ -69,17 +69,23 @@ class MenuCell: BaseCell {
     
     let imageView: UIImageView = {
         let iv = UIImageView()
-        iv.image = UIImage(named: "home")?.withRenderingMode(.alwaysTemplate)
+        iv.image = UIImage(named: "Home not selected")?.withRenderingMode(.alwaysTemplate)
         iv.tintColor = UIColor.rgb(red: 91, green: 14, blue: 13)
         return iv
     }()
-    
-//    override var highlighted: Bool {
-//        didSet {
-//            imageView.tintColor = highlighted ? UIColor.whiteColor() : UIColor.rgb(91, green: 14, blue: 13)
-//        }
-//    }
-//
+    // if the cell get tapped it gets white, when the user pull out his finger gets last colur
+    override var isHighlighted: Bool {
+        didSet {
+            imageView.tintColor = isHighlighted ? UIColor.white : UIColor.rgb(red: 91, green: 14, blue: 13)
+        }
+    }
+    // if the cell get selected it gets white
+    override var isSelected: Bool {
+        didSet {
+            imageView.tintColor = isSelected ? UIColor.white : UIColor.rgb(red: 91, green: 14, blue: 13)
+        }
+    }
+
  
     override func setupViews() {
         super.setupViews()
