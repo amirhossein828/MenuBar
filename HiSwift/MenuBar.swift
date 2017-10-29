@@ -17,7 +17,8 @@ class MenuBar : UIView, UICollectionViewDataSource, UICollectionViewDelegate, UI
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.backgroundColor = UIColor.rgb(red: 230, green: 32, blue: 31)
+//        cv.backgroundColor = UIColor.rgb(red: 230, green: 32, blue: 31)
+        cv.backgroundColor = UIColor.clear
         cv.dataSource = self
         cv.delegate = self
         return cv
@@ -29,7 +30,7 @@ class MenuBar : UIView, UICollectionViewDataSource, UICollectionViewDelegate, UI
     override init(frame: CGRect) {
         super.init(frame: frame)
         collectionView.register(MenuCell.self, forCellWithReuseIdentifier: cellId)
-        backgroundColor = UIColor.blue
+        backgroundColor = UIColor.clear
         // add collection view to the view
         addSubview(collectionView)
         addConstraintsWithFormat(format : "H:|[v0]|", views: collectionView)
@@ -57,7 +58,7 @@ class MenuBar : UIView, UICollectionViewDataSource, UICollectionViewDelegate, UI
         
         cell.imageView.image = UIImage(named: imageNames[indexPath.item])?.withRenderingMode(.alwaysTemplate)
         cell.tintColor = UIColor.rgb(red: 91, green: 14, blue: 13)
-        cell.backgroundColor = UIColor.blue
+        cell.backgroundColor = UIColor.clear
         
         return cell
     }
@@ -82,7 +83,8 @@ class MenuCell: BaseCell {
     let imageView: UIImageView = {
         let iv = UIImageView()
         iv.image = UIImage(named: "Home not selected")?.withRenderingMode(.alwaysTemplate)
-        iv.tintColor = UIColor.rgb(red: 91, green: 14, blue: 13)
+//        iv.tintColor = UIColor.rgb(red: 91, green: 14, blue: 13)
+        iv.tintColor = UIColor.clear
         return iv
     }()
     // if the cell get tapped it gets white, when the user pull out his finger gets last colur
