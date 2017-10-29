@@ -9,6 +9,10 @@
 import UIKit
 
 class MenuBar : UIView, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout  {
+    
+    // refrence to the HomeViewController
+    var homeController: HomeViewController?
+
     // create collection view
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -34,6 +38,11 @@ class MenuBar : UIView, UICollectionViewDataSource, UICollectionViewDelegate, UI
         let selectedIndexPath = NSIndexPath(item: 0, section: 0)
         collectionView.selectItem(at: selectedIndexPath as IndexPath, animated: false, scrollPosition: [])
         
+    }
+    // it defines how the celles will get selected
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+       
+        homeController?.scrollToMenuIndex(menuIndex: indexPath.item)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
