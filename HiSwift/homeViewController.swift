@@ -8,9 +8,8 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
+class HomeViewController: UICollectionViewController,UICollectionViewDelegateFlowLayout {
     
-    @IBOutlet weak var collectionView: UICollectionView!
     
     let cellId = "cell"
     override func viewDidLoad() {
@@ -28,6 +27,16 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         collectionView?.scrollToItem(at: indexPath as IndexPath, at: [], animated: true)
     }
+    // this method make the icones white when the scrolling happen (target of collection view)
+    override func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        
+        let index = targetContentOffset.pointee.x / view.frame.width
+        
+        let indexPath = NSIndexPath(item: Int(index), section: 0)
+        menuBar.collectionView.selectItem(at: indexPath as IndexPath, animated: true, scrollPosition: [])
+        
+    }
+    
     
      lazy var menuBar : MenuBar = {
         let mb = MenuBar()
@@ -53,12 +62,12 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
 //        <#code#>
 //    }
     
-    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    public  override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 3
     }
     
 
-    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    public  override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
         let colors: [UIColor] = [UIColor.blue,.brown,.gray]
         cell.backgroundColor = colors[indexPath.row]
@@ -71,4 +80,6 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
 
 
 }
+
+
 
