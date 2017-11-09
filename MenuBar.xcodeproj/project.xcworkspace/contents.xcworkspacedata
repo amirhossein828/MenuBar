@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:HiSwift.xcodeproj">
+      location = "self:/Users/seyedamirhosseinhashemi/Documents/ios/advanced Ios/HiSwift/MenuBar.xcodeproj">
    </FileRef>
 </Workspace>

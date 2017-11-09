@@ -25,7 +25,7 @@ class MenuBar : UIView, UICollectionViewDataSource, UICollectionViewDelegate, UI
     }()
     
     let cellId = "cellId"
-    let imageNames = ["Social not selected","Home not selected", "Profile not selected"]
+    let imageNames = ["image1","image2", "image3"]
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -111,6 +111,7 @@ class MenuCell: BaseCell {
         addConstraint(NSLayoutConstraint(item: imageView, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1, constant: 0))
         addConstraint(NSLayoutConstraint(item: imageView, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0))
     }
+    
     
 }
 
