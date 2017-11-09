@@ -36,17 +36,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		968048A41FA4FD6F00AA7445 /* HiSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		968048A41FA4FD6F00AA7445 /* MenuBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MenuBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		968048A71FA4FD6F00AA7445 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		968048A91FA4FD6F00AA7445 /* homeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeViewController.swift; sourceTree = "<group>"; };
 		968048AC1FA4FD6F00AA7445 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		968048AE1FA4FD6F00AA7445 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		968048B11FA4FD6F00AA7445 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		968048B31FA4FD6F00AA7445 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		968048B81FA4FD7000AA7445 /* HiSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HiSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		968048B81FA4FD7000AA7445 /* MenuBarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MenuBarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		968048BC1FA4FD7000AA7445 /* HiSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiSwiftTests.swift; sourceTree = "<group>"; };
 		968048BE1FA4FD7000AA7445 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		968048C31FA4FD7000AA7445 /* HiSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HiSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		968048C31FA4FD7000AA7445 /* MenuBarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MenuBarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		968048C71FA4FD7000AA7445 /* HiSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiSwiftUITests.swift; sourceTree = "<group>"; };
 		968048C91FA4FD7000AA7445 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		968048D51FA4FDF200AA7445 /* MenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 		9680489B1FA4FD6F00AA7445 = {
 			isa = PBXGroup;
 			children = (
-				968048A61FA4FD6F00AA7445 /* HiSwift */,
+				968048A61FA4FD6F00AA7445 /* Hiswift */,
 				968048BB1FA4FD7000AA7445 /* HiSwiftTests */,
 				968048C61FA4FD7000AA7445 /* HiSwiftUITests */,
 				968048A51FA4FD6F00AA7445 /* Products */,
@@ -91,14 +91,14 @@
 		968048A51FA4FD6F00AA7445 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				968048A41FA4FD6F00AA7445 /* HiSwift.app */,
-				968048B81FA4FD7000AA7445 /* HiSwiftTests.xctest */,
-				968048C31FA4FD7000AA7445 /* HiSwiftUITests.xctest */,
+				968048A41FA4FD6F00AA7445 /* MenuBar.app */,
+				968048B81FA4FD7000AA7445 /* MenuBarTests.xctest */,
+				968048C31FA4FD7000AA7445 /* MenuBarUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		968048A61FA4FD6F00AA7445 /* HiSwift */ = {
+		968048A61FA4FD6F00AA7445 /* Hiswift */ = {
 			isa = PBXGroup;
 			children = (
 				968048A71FA4FD6F00AA7445 /* AppDelegate.swift */,
@@ -110,7 +110,7 @@
 				968048D51FA4FDF200AA7445 /* MenuBar.swift */,
 				968048D71FA5068A00AA7445 /* Extensions.swift */,
 			);
-			path = HiSwift;
+			path = Hiswift;
 			sourceTree = "<group>";
 		};
 		968048BB1FA4FD7000AA7445 /* HiSwiftTests */ = {
@@ -134,9 +134,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		968048A31FA4FD6F00AA7445 /* HiSwift */ = {
+		968048A31FA4FD6F00AA7445 /* MenuBar */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 968048CC1FA4FD7000AA7445 /* Build configuration list for PBXNativeTarget "HiSwift" */;
+			buildConfigurationList = 968048CC1FA4FD7000AA7445 /* Build configuration list for PBXNativeTarget "MenuBar" */;
 			buildPhases = (
 				968048A01FA4FD6F00AA7445 /* Sources */,
 				968048A11FA4FD6F00AA7445 /* Frameworks */,
@@ -146,14 +146,14 @@
 			);
 			dependencies = (
 			);
-			name = HiSwift;
+			name = MenuBar;
 			productName = HiSwift;
-			productReference = 968048A41FA4FD6F00AA7445 /* HiSwift.app */;
+			productReference = 968048A41FA4FD6F00AA7445 /* MenuBar.app */;
 			productType = "com.apple.product-type.application";
 		};
-		968048B71FA4FD7000AA7445 /* HiSwiftTests */ = {
+		968048B71FA4FD7000AA7445 /* MenuBarTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 968048CF1FA4FD7000AA7445 /* Build configuration list for PBXNativeTarget "HiSwiftTests" */;
+			buildConfigurationList = 968048CF1FA4FD7000AA7445 /* Build configuration list for PBXNativeTarget "MenuBarTests" */;
 			buildPhases = (
 				968048B41FA4FD7000AA7445 /* Sources */,
 				968048B51FA4FD7000AA7445 /* Frameworks */,
@@ -164,14 +164,14 @@
 			dependencies = (
 				968048BA1FA4FD7000AA7445 /* PBXTargetDependency */,
 			);
-			name = HiSwiftTests;
+			name = MenuBarTests;
 			productName = HiSwiftTests;
-			productReference = 968048B81FA4FD7000AA7445 /* HiSwiftTests.xctest */;
+			productReference = 968048B81FA4FD7000AA7445 /* MenuBarTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		968048C21FA4FD7000AA7445 /* HiSwiftUITests */ = {
+		968048C21FA4FD7000AA7445 /* MenuBarUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 968048D21FA4FD7000AA7445 /* Build configuration list for PBXNativeTarget "HiSwiftUITests" */;
+			buildConfigurationList = 968048D21FA4FD7000AA7445 /* Build configuration list for PBXNativeTarget "MenuBarUITests" */;
 			buildPhases = (
 				968048BF1FA4FD7000AA7445 /* Sources */,
 				968048C01FA4FD7000AA7445 /* Frameworks */,
@@ -182,9 +182,9 @@
 			dependencies = (
 				968048C51FA4FD7000AA7445 /* PBXTargetDependency */,
 			);
-			name = HiSwiftUITests;
+			name = MenuBarUITests;
 			productName = HiSwiftUITests;
-			productReference = 968048C31FA4FD7000AA7445 /* HiSwiftUITests.xctest */;
+			productReference = 968048C31FA4FD7000AA7445 /* MenuBarUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -213,7 +213,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9680489F1FA4FD6F00AA7445 /* Build configuration list for PBXProject "HiSwift" */;
+			buildConfigurationList = 9680489F1FA4FD6F00AA7445 /* Build configuration list for PBXProject "MenuBar" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -226,9 +226,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				968048A31FA4FD6F00AA7445 /* HiSwift */,
-				968048B71FA4FD7000AA7445 /* HiSwiftTests */,
-				968048C21FA4FD7000AA7445 /* HiSwiftUITests */,
+				968048A31FA4FD6F00AA7445 /* MenuBar */,
+				968048B71FA4FD7000AA7445 /* MenuBarTests */,
+				968048C21FA4FD7000AA7445 /* MenuBarUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -293,12 +293,12 @@
 /* Begin PBXTargetDependency section */
 		968048BA1FA4FD7000AA7445 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 968048A31FA4FD6F00AA7445 /* HiSwift */;
+			target = 968048A31FA4FD6F00AA7445 /* MenuBar */;
 			targetProxy = 968048B91FA4FD7000AA7445 /* PBXContainerItemProxy */;
 		};
 		968048C51FA4FD7000AA7445 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 968048A31FA4FD6F00AA7445 /* HiSwift */;
+			target = 968048A31FA4FD6F00AA7445 /* MenuBar */;
 			targetProxy = 968048C41FA4FD7000AA7445 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -473,7 +473,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HiSwift.app/HiSwift";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MenuBar.app/MenuBar";
 			};
 			name = Debug;
 		};
@@ -490,7 +490,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HiSwift.app/HiSwift";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MenuBar.app/MenuBar";
 			};
 			name = Release;
 		};
@@ -529,7 +529,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9680489F1FA4FD6F00AA7445 /* Build configuration list for PBXProject "HiSwift" */ = {
+		9680489F1FA4FD6F00AA7445 /* Build configuration list for PBXProject "MenuBar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				968048CA1FA4FD7000AA7445 /* Debug */,
@@ -538,7 +538,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		968048CC1FA4FD7000AA7445 /* Build configuration list for PBXNativeTarget "HiSwift" */ = {
+		968048CC1FA4FD7000AA7445 /* Build configuration list for PBXNativeTarget "MenuBar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				968048CD1FA4FD7000AA7445 /* Debug */,
@@ -547,7 +547,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		968048CF1FA4FD7000AA7445 /* Build configuration list for PBXNativeTarget "HiSwiftTests" */ = {
+		968048CF1FA4FD7000AA7445 /* Build configuration list for PBXNativeTarget "MenuBarTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				968048D01FA4FD7000AA7445 /* Debug */,
@@ -556,7 +556,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		968048D21FA4FD7000AA7445 /* Build configuration list for PBXNativeTarget "HiSwiftUITests" */ = {
+		968048D21FA4FD7000AA7445 /* Build configuration list for PBXNativeTarget "MenuBarUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				968048D31FA4FD7000AA7445 /* Debug */,
