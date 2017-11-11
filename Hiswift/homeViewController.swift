@@ -57,7 +57,7 @@ class HomeViewController: UICollectionViewController,UICollectionViewDelegateFlo
     }
     // avoid scrolling when it reaches to starting page edge
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if ( scrollView.contentOffset.x < 0) {
+        if ( scrollView.contentOffset.x < 0 || scrollView.contentOffset.x > self.view.frame.maxX * 2) {
             scrollView.panGestureRecognizer.isEnabled = false
             scrollView.panGestureRecognizer.isEnabled = true
         }
