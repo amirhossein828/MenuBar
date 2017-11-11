@@ -30,6 +30,8 @@ class HomeViewController: UICollectionViewController,UICollectionViewDelegateFlo
     }
     
     
+    
+    
      lazy var menuBar : MenuBar = {
         let mb = MenuBar()
         mb.homeControllerDelegate = self
@@ -52,6 +54,13 @@ class HomeViewController: UICollectionViewController,UICollectionViewDelegateFlo
     
     public  override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 3
+    }
+    // avoid scrolling when it reaches to starting page edge
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if ( scrollView.contentOffset.x < 0) {
+            scrollView.panGestureRecognizer.isEnabled = false
+            scrollView.panGestureRecognizer.isEnabled = true
+        }
     }
     
 

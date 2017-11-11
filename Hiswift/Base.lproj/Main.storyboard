@@ -12,7 +12,7 @@
         <!--Home View Controller-->
         <scene sceneID="lUX-FV-qf0">
             <objects>
-                <viewController id="MNp-Ft-vwK" customClass="HomeViewController" customModule="HiSwift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="MNp-Ft-vwK" customClass="HomeViewController" customModule="MenuBar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xo6-km-UYz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -62,7 +62,7 @@
         <!--Home View Controller-->
         <scene sceneID="SmX-Fa-S99">
             <objects>
-                <collectionViewController id="FvH-S3-rrS" customClass="HomeViewController" customModule="HiSwift" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="FvH-S3-rrS" customClass="HomeViewController" customModule="MenuBar" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" id="K1g-MA-NKj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
