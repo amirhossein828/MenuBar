@@ -8,22 +8,17 @@
 
 import UIKit
 
-class HomeViewController: UICollectionViewController,UICollectionViewDelegateFlowLayout , HomeViewContollerScrollToMenuDelegate{
+class HomeViewController: UICollectionViewController,UICollectionViewDelegateFlowLayout {
     
     
     let cellId = "cell"
     override func viewDidLoad() {
         super.viewDidLoad()
-//        setupCollectionView()
         setupMenuBar()
     }
     
     
-    //delegate the changing of the pages inside HomeViewController to the menu bar
-    func scrollToMenuIndex(menuIndex: Int) {
-        let indexPath = NSIndexPath(item: menuIndex, section: 0)
-        collectionView?.scrollToItem(at: indexPath as IndexPath, at: [], animated: true)
-    }
+    
     // this method make the icones white when the scrolling happen (target of collection view)
     override func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         
@@ -54,10 +49,6 @@ class HomeViewController: UICollectionViewController,UICollectionViewDelegateFlo
         // Dispose of any resources that can be recreated.
     }
     
-    // how we understand which where we are in collection view
-//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        <#code#>
-//    }
     
     public  override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 3
@@ -76,6 +67,14 @@ class HomeViewController: UICollectionViewController,UICollectionViewDelegateFlo
     }
 
 
+}
+
+extension HomeViewController : HomeViewContollerScrollToMenuDelegate {
+    // Delegate the changing of the pages inside HomeViewController to the menu bar
+    func scrollToMenuIndex(menuIndex: Int) {
+        let indexPath = NSIndexPath(item: menuIndex, section: 0)
+        collectionView?.scrollToItem(at: indexPath as IndexPath, at: [], animated: true)
+    }
 }
 // protocol which defines a method which delegate the changing of the pages inside HomeViewController to the menu bar
 protocol HomeViewContollerScrollToMenuDelegate {
