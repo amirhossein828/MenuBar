@@ -8,23 +8,20 @@
 
 import UIKit
 
-class HomeViewController: UICollectionViewController,UICollectionViewDelegateFlowLayout {
+class HomeViewController: UICollectionViewController,UICollectionViewDelegateFlowLayout , HomeViewContollerScrollToMenuDelegate{
     
     
     let cellId = "cell"
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupCollectionView()
+//        setupCollectionView()
         setupMenuBar()
     }
     
-    func setupCollectionView() {
-        
-    }
     
+    //delegate the changing of the pages inside HomeViewController to the menu bar
     func scrollToMenuIndex(menuIndex: Int) {
         let indexPath = NSIndexPath(item: menuIndex, section: 0)
-        
         collectionView?.scrollToItem(at: indexPath as IndexPath, at: [], animated: true)
     }
     // this method make the icones white when the scrolling happen (target of collection view)
@@ -40,7 +37,7 @@ class HomeViewController: UICollectionViewController,UICollectionViewDelegateFlo
     
      lazy var menuBar : MenuBar = {
         let mb = MenuBar()
-        mb.homeController = self
+        mb.homeControllerDelegate = self
         return mb
     }()
     
@@ -79,6 +76,10 @@ class HomeViewController: UICollectionViewController,UICollectionViewDelegateFlo
     }
 
 
+}
+// protocol which defines a method which delegate the changing of the pages inside HomeViewController to the menu bar
+protocol HomeViewContollerScrollToMenuDelegate {
+    func scrollToMenuIndex(menuIndex: Int)
 }
 
 

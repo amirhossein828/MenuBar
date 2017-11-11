@@ -11,7 +11,7 @@ import UIKit
 class MenuBar : UIView, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout  {
     
     // refrence to the HomeViewController
-    var homeController: HomeViewController?
+    var homeControllerDelegate: HomeViewContollerScrollToMenuDelegate?
 
     // create collection view
     lazy var collectionView: UICollectionView = {
@@ -23,6 +23,7 @@ class MenuBar : UIView, UICollectionViewDataSource, UICollectionViewDelegate, UI
         cv.delegate = self
         return cv
     }()
+    
     
     let cellId = "cellId"
     let imageNames = ["image1","image2", "image3"]
@@ -40,10 +41,10 @@ class MenuBar : UIView, UICollectionViewDataSource, UICollectionViewDelegate, UI
         collectionView.selectItem(at: selectedIndexPath as IndexPath, animated: false, scrollPosition: [])
         
     }
-    // it defines how the celles will get selected
+    // Tells the delegate that the item at the specified index path was selected.
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-       
-        homeController?.scrollToMenuIndex(menuIndex: indexPath.item)
+       // it runs the method scrollToMenuIndex in homeViewController to take the pages in homeViewController to the index which the menubar is
+        homeControllerDelegate?.scrollToMenuIndex(menuIndex: indexPath.item)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
