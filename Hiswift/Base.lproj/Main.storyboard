@@ -76,7 +76,18 @@
                         <view key="backgroundView" contentMode="scaleToFill" id="baM-Lc-ahu">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5kT-G5-vBM">
+                                    <rect key="frame" x="67" y="490" width="240" height="128"/>
+                                    <connections>
+                                        <segue destination="MwI-w3-fmL" kind="embed" id="YbC-9h-hcD"/>
+                                    </connections>
+                                </containerView>
+                            </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="5kT-G5-vBM" firstAttribute="centerX" secondItem="baM-Lc-ahu" secondAttribute="centerX" id="sog-wj-v0c"/>
+                            </constraints>
                         </view>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="LUj-56-MP2">
@@ -97,6 +108,32 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u6e-UX-gEK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="692" y="-87.706146926536732"/>
+        </scene>
+        <!--My Page View Controller-->
+        <scene sceneID="ayj-I0-RtB">
+            <objects>
+                <viewController id="MwI-w3-fmL" customClass="MyPageViewController" customModule="MenuBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pD8-Fj-cC4">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="pfk-IZ-s1P">
+                                <rect key="frame" x="101" y="46" width="39" height="37"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pfk-IZ-s1P" firstAttribute="centerX" secondItem="pD8-Fj-cC4" secondAttribute="centerX" id="dpl-gJ-e4P"/>
+                            <constraint firstItem="pfk-IZ-s1P" firstAttribute="centerY" secondItem="pD8-Fj-cC4" secondAttribute="centerY" id="fuu-PV-QFA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myPageController" destination="pfk-IZ-s1P" id="Oi9-Gj-dGN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QxP-vD-eid" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1322" y="125"/>
         </scene>
     </scenes>
 </document>

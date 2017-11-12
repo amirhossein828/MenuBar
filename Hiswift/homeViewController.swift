@@ -90,5 +90,9 @@ protocol HomeViewContollerScrollToMenuDelegate {
     func scrollToMenuIndex(menuIndex: Int)
 }
 
+protocol HomeSelectItemOfPageControllerDelegate {
+    func selectItem(item : Int)
+}
+
 
 
