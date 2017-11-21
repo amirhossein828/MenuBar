@@ -16,7 +16,6 @@
 		968048C81FA4FD7000AA7445 /* HiSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968048C71FA4FD7000AA7445 /* HiSwiftUITests.swift */; };
 		968048D61FA4FDF200AA7445 /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968048D51FA4FDF200AA7445 /* MenuBar.swift */; };
 		968048D81FA5068A00AA7445 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968048D71FA5068A00AA7445 /* Extensions.swift */; };
-		96F400701FB7F96700547E25 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F4006F1FB7F96700547E25 /* MyPageViewController.swift */; };
 		96F400721FB806F800547E25 /* SecondHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F400711FB806F800547E25 /* SecondHomeViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,7 +52,6 @@
 		968048C91FA4FD7000AA7445 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		968048D51FA4FDF200AA7445 /* MenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
 		968048D71FA5068A00AA7445 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		96F4006F1FB7F96700547E25 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		96F400711FB806F800547E25 /* SecondHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondHomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,7 +112,6 @@
 				968048B31FA4FD6F00AA7445 /* Info.plist */,
 				968048D51FA4FDF200AA7445 /* MenuBar.swift */,
 				968048D71FA5068A00AA7445 /* Extensions.swift */,
-				96F4006F1FB7F96700547E25 /* MyPageViewController.swift */,
 			);
 			path = Hiswift;
 			sourceTree = "<group>";
@@ -271,7 +268,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96F400701FB7F96700547E25 /* MyPageViewController.swift in Sources */,
 				96F400721FB806F800547E25 /* SecondHomeViewController.swift in Sources */,
 				968048AA1FA4FD6F00AA7445 /* homeViewController.swift in Sources */,
 				968048A81FA4FD6F00AA7445 /* AppDelegate.swift in Sources */,

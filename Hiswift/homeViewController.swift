@@ -15,10 +15,9 @@ class HomeViewController: UICollectionViewController,UICollectionViewDelegateFlo
     override func viewDidLoad() {
         super.viewDidLoad()
         setupMenuBar()
-        // 
+        
     }
     
-     weak var myPgeController : HomeSelectItemOfPageControllerDelegate?
     
     // this method make the icones white when the scrolling happen (target of collection view)
     override func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
@@ -27,7 +26,6 @@ class HomeViewController: UICollectionViewController,UICollectionViewDelegateFlo
         
         let indexPath = NSIndexPath(item: Int(index), section: 0)
         menuBar.collectionView.selectItem(at: indexPath as IndexPath, animated: true, scrollPosition: [])
-        myPgeController?.selectItem(item: Int(index))
         
     }
     
