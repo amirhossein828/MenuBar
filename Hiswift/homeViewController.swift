@@ -18,7 +18,7 @@ class HomeViewController: UICollectionViewController,UICollectionViewDelegateFlo
         // 
     }
     
-    
+     weak var myPgeController : HomeSelectItemOfPageControllerDelegate?
     
     // this method make the icones white when the scrolling happen (target of collection view)
     override func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
@@ -27,6 +27,7 @@ class HomeViewController: UICollectionViewController,UICollectionViewDelegateFlo
         
         let indexPath = NSIndexPath(item: Int(index), section: 0)
         menuBar.collectionView.selectItem(at: indexPath as IndexPath, animated: true, scrollPosition: [])
+        myPgeController?.selectItem(item: Int(index))
         
     }
     
@@ -86,10 +87,14 @@ extension HomeViewController : HomeViewContollerScrollToMenuDelegate {
         collectionView?.scrollToItem(at: indexPath as IndexPath, at: [], animated: true)
     }
 }
+
+
 // protocol which defines a method which delegate the changing of the pages inside HomeViewController to the menu bar
 protocol HomeViewContollerScrollToMenuDelegate {
     func scrollToMenuIndex(menuIndex: Int)
 }
+
+
 
 
 
