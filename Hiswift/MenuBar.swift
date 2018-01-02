@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MenuBar : UIView, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout  {
+@IBDesignable class MenuBar : UIView, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout  {
     
     // refrence to the HomeViewController
     var homeControllerDelegate: HomeViewContollerScrollToMenuDelegate?
@@ -74,7 +74,8 @@ class MenuBar : UIView, UICollectionViewDataSource, UICollectionViewDelegate, UI
     }
     
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: aDecoder)
+//        fatalError("init(coder:) has not been implemented")
     }
     
 }
@@ -130,3 +131,7 @@ class BaseCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 }
+
+
+
+

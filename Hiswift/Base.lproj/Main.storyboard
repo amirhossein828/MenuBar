@@ -98,5 +98,30 @@
             </objects>
             <point key="canvasLocation" x="692" y="-87.706146926536732"/>
         </scene>
+        <!--Second Home View Controller-->
+        <scene sceneID="Xnv-r5-Imr">
+            <objects>
+                <viewController id="me1-X4-wn2" customClass="SecondHomeViewController" customModule="MenuBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6zX-dC-RbP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="006-iL-6Rh" customClass="MenuBar" customModule="MenuBar" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="dUF-s6-hgq"/>
+                    </view>
+                    <connections>
+                        <outlet property="custonviewTest" destination="006-iL-6Rh" id="PAF-wW-auc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y5J-WP-kUJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1487.2" y="-59.820089955022496"/>
+        </scene>
     </scenes>
 </document>

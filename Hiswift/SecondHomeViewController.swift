@@ -10,6 +10,7 @@ import UIKit
 
 class SecondHomeViewController: UIViewController  {
 
+    @IBOutlet weak var custonviewTest: MenuBar!
     override func viewDidLoad() {
         super.viewDidLoad()
 
