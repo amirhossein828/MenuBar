@@ -10,16 +10,18 @@ import UIKit
 
 class HomeViewController: UICollectionViewController,UICollectionViewDelegateFlowLayout {
     
+
     
     let cellId = "cell"
     override func viewDidLoad() {
         super.viewDidLoad()
+
         setupMenuBar()
         
     }
     
     
-    // this method make the icones white when the scrolling happen (target of collection view)
+    // this method makes the icones white when the scrolling happen (target of collection view)
     override func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         
         let index = targetContentOffset.pointee.x / view.frame.width
@@ -37,10 +39,12 @@ class HomeViewController: UICollectionViewController,UICollectionViewDelegateFlo
         mb.homeControllerDelegate = self
         return mb
     }()
+ 
     
     // This method put the menubar on top of the view
     private func setupMenuBar() {
         view.addSubview(menuBar)
+        
         // add some constraint to put the menu bar on top
         view.addConstraintsWithFormat(format:  "H:|[v0]|", views: menuBar)
         view.addConstraintsWithFormat(format: "V:|[v0(70)]", views: menuBar)
@@ -86,11 +90,13 @@ extension HomeViewController : HomeViewContollerScrollToMenuDelegate {
     }
 }
 
-
 // protocol which defines a method which delegate the changing of the pages inside HomeViewController to the menu bar
 protocol HomeViewContollerScrollToMenuDelegate {
     func scrollToMenuIndex(menuIndex: Int)
 }
+
+
+
 
 
 
